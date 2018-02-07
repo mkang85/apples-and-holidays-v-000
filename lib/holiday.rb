@@ -80,15 +80,9 @@ def all_supplies_in_holidays(holiday_hash)
 
 
 def all_holidays_with_bbq(holiday_hash)
-    newArr = []
-    holiday_hash.each do |seasons, holidays|
-      holidays.each do |holiday, supplies|
-        supplies.each do |supply|
-          if supply == "BBQ"
-            newArr << holiday
+    holiday_hash.map do |seasons, holidays|
+      holidays.map do |holiday, supplies|
+        holiday if supplies.include?("BBQ")
           end
         end
-      end
-    end
-    return newArr
 end
