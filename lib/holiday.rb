@@ -67,17 +67,16 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-  holiday_hash.each do |key, val|
-     puts "#{key.to_s.capitalize!}:"
-    val.each do |key1, val1|
-      puts "#{key1.to_s.capitalize!}:"
-      i = 0
-      while i < val1.length
-        puts val1[i]
+    holiday_hash.each do |key, val|
+      puts "#{key.to_s.capitalize!}:"
+      val.each do |key1, val1|
+        puts "#{key1.to_s.capitalize!}:"
+        val1.each do |ele|
+          puts ele
+        end
       end
     end
   end
-end
 
 # def holiday_ornaments(hash)
 #   hash.each do |key, val|
