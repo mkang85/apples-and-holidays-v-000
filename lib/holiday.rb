@@ -68,9 +68,29 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   holiday_hash.map do |key, val|
-    puts key.to_s.capitalize! + ":"
+    puts "#{key.to_s.capitalize!}:"
+    val.each do |key1, val1|
+      puts "#{key1.to_s.capitalize!}:"
+      val1.each do |ele|
+        puts ele
+      end
+    end
   end
 end
+
+# def holiday_ornaments(hash)
+#   hash.each do |key, val|
+#     puts "#{key.to_s.capitalize!}:"
+#     val.each do |key1, val1|
+#       puts "#{key1.to_s.capitalize!}:"
+#       val1.each do |ele|
+#         puts ele
+#       end
+#     end
+#   end
+# end
+
+
 
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
