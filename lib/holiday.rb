@@ -71,8 +71,9 @@ def all_supplies_in_holidays(holiday_hash)
      puts "#{key.to_s.capitalize!}:"
     val.each do |key1, val1|
       puts "#{key1.to_s.capitalize!}:"
-      val1.each do |ele|
-      puts ele
+      i = 0
+      while i < val1.length
+        puts val1[i]
       end
     end
   end
