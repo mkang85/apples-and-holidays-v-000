@@ -84,5 +84,22 @@ def all_holidays_with_bbq(holiday_hash)
       holidays.map do |holiday, supplies|
         holiday if supplies.include?("BBQ")
       end
-  end.flatten.compact
+  end.flatten.compact #note, that "flatten, will get rid of the nested arrays. compact will get rid of "nil" in arrays.
 end
+
+
+
+# MY SOLUTION BELOW:
+# def all_holidays_with_bbq(holiday_hash)
+#   newArr = []
+#   holiday_hash.each do |seasons, holidays|
+#     holidays.each do |holiday, supplies|
+#       supplies.each do |supply|
+#         if supply == "BBQ"
+#           newArr << holiday
+#         end
+#       end
+#     end
+#   end
+#   return newArr
+# end
